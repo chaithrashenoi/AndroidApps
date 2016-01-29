@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chaithras.smartalarm"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.chaithras.smartalarm.SmartAlarmHome"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.chaithras.smartalarm.SmartAlarmCallback"
+            android:label="@string/title_activity_smart_alarm_callback" >
+        </activity>
+        <activity
+            android:name="com.chaithras.smartalarm.SmartAlarmEdit"
+            android:label="@string/title_activity_set_alarm_edit" >
+        </activity>
+        <activity
+            android:name="com.chaithras.smartalarm.AlarmListDB"
+            android:label="@string/title_activity_alarm_list" >
+        </activity>
+        <activity
+            android:name="com.chaithras.smartalarm.SmartAlarmAdd"
+            android:label="@string/title_activity_smart_alarm_add" >
+        </activity>
+        <activity
+            android:name="com.chaithras.smartalarm.SmartAlarmRing"
+            android:launchMode="singleInstance" 
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_smart_alarm_ring"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+    </application>
+
+</manifest>
